@@ -1,6 +1,5 @@
 app/build
 app/dist
-app/src/static/**
 node_modules
 
 npm-debug.log
