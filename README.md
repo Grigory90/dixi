@@ -10,7 +10,7 @@ Clone repo:
 
 install dependencies:
 
-`cd projectname & npm i`
+`cd projectname && npm i`
 
 **NOTE:** if you haven't used `Gulp` before, you need to install the gulp package as a global install, `npm i -g gulp`.
 
