@@ -22,6 +22,7 @@ const plumber = require('gulp-plumber');
 const changed = require('gulp-changed');
 const imagemin = require('gulp-imagemin');
 const sequence = require('gulp-sequence');
+const svgsprite = require('gulp-svg-sprite');
 const sizereport = require('gulp-sizereport');
 const sourcemaps = require('gulp-sourcemaps');
 const browsersync = require('browser-sync').create();
@@ -51,7 +52,7 @@ const cfg = require('./config.json');
 let isProduction = false;
 let tasks = {
     default: ['server', 'watch'],
-    build: ['clean', 'html', 'css', 'js', 'images', 'static']
+    build: ['clean', 'html', 'css', 'js', 'sprite', 'images', 'static']
 };
 
 /**
@@ -91,6 +92,11 @@ gulp.task('watch', () => {
     });
     watch(`${cfg.dirs.src}/js/**/*.js`, () => {
         sequence('js', browsersync.reload)(err => {
+            if (err) throw err;
+        });
+    });
+    watch(`${cfg.dirs.src}/icons/**/*.svg`, () => {
+        sequence('sprite', 'html')(err => {
             if (err) throw err;
         });
     });
@@ -186,9 +192,21 @@ gulp.task('images', () => {
     let dest = `${cfg.dirs.build}/img`;
     let stream = gulp.src(`${cfg.dirs.src}/img/**/*.{svg,png,jpg,gif,ico}`);
     if (!isProduction) stream = stream.pipe(changed(dest));
-    if (isProduction) stream = stream.pipe(imagemin(cfg.plugins.imagemin));
+    if (isProduction) {
+        stream = stream.pipe(imagemin([
+            imagemin.svgo({
+                plugins: [{cleanupIDs: false}]
+            })
+        ], cfg.plugins.imagemin));
+    }
     return stream.pipe(gulp.dest(dest))
         .pipe(browsersync.stream());
+});
+
+gulp.task('sprite', () => {
+    return gulp.src(`${cfg.dirs.src}/icons/**/*.svg`)
+        .pipe(svgsprite(cfg.plugins.svgsprite))
+        .pipe(gulp.dest(`${cfg.dirs.src}/img`));
 });
 
 gulp.task('static', () => {

@@ -1,3 +1,3 @@
-import Helper from './helper.js';
+import Helper from './helper';
 
 Helper.log('Initialization is complete!');
