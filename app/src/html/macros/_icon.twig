@@ -1,0 +1,5 @@
+{% macro render(name, width, height) %}
+    <svg viewBox="0 0 {{ width|default(32) }} {{ height|default(32) }}" width="{{ width|default(32) }}" height="{{ height|default(32) }}">
+        <use xlink:href="#{{ name }}"></use>
+    </svg>
+{% endmacro %}

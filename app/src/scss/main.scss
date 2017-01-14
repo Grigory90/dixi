@@ -1,3 +1,5 @@
+@import './utils/_icon.scss';
+
 $color: #fff;
 $background: #1b8fc9;
 
@@ -7,8 +9,9 @@ body{
     margin: 0;
     color: $color;
     background: $background;
+    text-align: center;
 }
 
-h1{
-    margin: auto;
+.page{
+    margin: auto; 
 }

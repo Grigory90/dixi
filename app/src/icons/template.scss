@@ -1,0 +1,4 @@
+.offset-background{
+    background-url: {{ sprite }};
+    background-position: {{#invert}}{{positionX}}{{/invert}}px {{#invert}}{{positionY}}{{/invert}}px;
+}

@@ -54,6 +54,24 @@
         "imagemin": {
             "verbose": true
         },
+        "svgsprite": {
+            "mode": {
+                "symbol": {
+                    "dest": ".",
+                    "inline": true,
+                    "sprite": "sprite.svg"
+                }
+            },
+            "shape": {
+                "id": {
+                    "generator": "icon-%s"
+                }
+            },
+            "svg": {
+                "xmlDeclaration": false,
+                "doctypeDeclaration": false
+            }
+        },
         "ftp": {
             "parallel": 10
         }

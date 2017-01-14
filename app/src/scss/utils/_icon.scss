@@ -1,0 +1,14 @@
+.icon{
+    display: inline-block;
+    line-height: 0;
+    fill: currentcolor;
+    & > *{
+        transform: translate3d(0, 0, 0);
+    }
+    [fill*='#']{
+        fill: currentcolor;
+    }
+    [stroke*='#']{
+        stroke: currentcolor;
+    }
+}
