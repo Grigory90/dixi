@@ -58,7 +58,6 @@
             "mode": {
                 "symbol": {
                     "dest": ".",
-                    "inline": true,
                     "sprite": "sprite.svg"
                 }
             },
@@ -69,7 +68,10 @@
             },
             "svg": {
                 "xmlDeclaration": false,
-                "doctypeDeclaration": false
+                "doctypeDeclaration": false,
+                "rootAttributes": {
+                    "style": "position:absolute;width:0;height:0;overflow:hidden"
+                }
             }
         },
         "ftp": {

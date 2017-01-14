@@ -1,5 +1,9 @@
 # Changelog
 
+### 0.2.1 (Jan 14, 2017)
+
+  - Fixed svg sprite attributes
+
 ### 0.2.0 (Jan 14, 2017)
 
   - Added svg sprite feature
