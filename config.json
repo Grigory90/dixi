@@ -32,7 +32,7 @@
                 "removeAll": true
             }
         },
-        "scss": {
+        "sass": {
             "includePaths": "./node_modules",
             "outputStyle": "expanded"
         },

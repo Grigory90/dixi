@@ -8,7 +8,7 @@ const rev = require('gulp-rev-all');
 const zip = require('gulp-zip');
 const gulp = require('gulp');
 const twig = require('gulp-twig');
-const scss = require('gulp-sass');
+const sass = require('gulp-sass');
 const less = require('gulp-less');
 const watch = require('gulp-watch');
 const babel = require('gulp-babel');
@@ -139,8 +139,8 @@ gulp.task('css', callback => {
             this.destroy();
         }));
     if (!isProduction) stream = stream.pipe(sourcemaps.init());
-    if (cfg.options.preproc === 'scss') {
-        stream = stream.pipe(scss(cfg.plugins.scss));
+    if (cfg.options.preproc === 'sass' || cfg.options.preproc === 'scss') {
+        stream = stream.pipe(sass(cfg.plugins.sass));
     } else if (cfg.options.preproc === 'less') {
         stream = stream.pipe(less(cfg.plugins.less));
     } else {

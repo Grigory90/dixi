@@ -1,6 +1,6 @@
 {
   "name": "project-builder",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Simply project builder based on Gulp",
   "author": "Grigory S. <grigorysergeevich@gmail.com>",
   "license": "MIT",

@@ -1,5 +1,9 @@
 # Changelog
 
+### 0.2.2 (Jan 15, 2017)
+
+  - Fixed typos
+  
 ### 0.2.1 (Jan 14, 2017)
 
   - Fixed svg sprite attributes
