@@ -1,6 +1,6 @@
 {
   "name": "project-builder",
-  "version": "0.1.0",
+  "version": "0.2.2",
   "description": "Simply project builder based on Gulp",
   "author": "Grigory S.",
   "license": "MIT",
@@ -18,13 +18,9 @@
   ],
   "scripts": {
     "start": "gulp",
-    "build": "gulp build",
-    "build:dev": "gulp build --dev",
+    "build": "gulp build --prod",
     "deploy": "gulp deploy",
     "clean": "gulp clean"
-  },
-  "engines": {
-    "node": ">=6.5.0"
   },
   "devDependencies": {
     "babel-preset-es2015": "^6.18.0",

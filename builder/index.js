@@ -26,6 +26,9 @@ gulp.task('build', () => {
     gulp.series(tasks);
 });
 
+gulp.task(taskClean);
+gulp.task(taskDeploy);
+
 gulp.task('debug', done => {
     console.log('debug');
     return done();
