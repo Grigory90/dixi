@@ -3,9 +3,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -14,10 +14,11 @@
 
     <div class="page">
         {% include './blocks/_title.twig' %}
+
         <div>
-            <span class="icon">{{ icon.render('icon-code') }}</span>
-            <span class="icon">{{ icon.render('icon-timer', 42, 42) }}</span>
-            <span class="icon">{{ icon.render('icon-link', 52, 52) }}</span>
+            <a href="#" class="icon">{{ icon.render('icon-code') }}</a>
+            <a href="#" class="icon">{{ icon.render('icon-timer', 42, 42) }}</a>
+            <a href="#" class="icon">{{ icon.render('icon-link', 52, 52) }}</a>
         </div>
     </div>
 

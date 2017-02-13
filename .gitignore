@@ -3,6 +3,6 @@ app/dist
 node_modules
 
 npm-debug.log
-ftp.json
+.ftp
 .jshintrc
 .tern-project
