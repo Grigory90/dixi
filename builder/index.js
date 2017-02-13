@@ -8,7 +8,7 @@ import taskStyles from './tasks/styles';
 import taskScripts from './tasks/scripts';
 import taskImages from './tasks/images';
 import taskSprite from './tasks/sprite';
-import taskStatic from './tasks/static';
+import taskStatics from './tasks/statics';
 import taskArchive from './tasks/archive';
 import taskDeploy from './tasks/deploy';
 import taskSizereport from './tasks/sizereport';
@@ -18,12 +18,19 @@ import cfg from './config';
 
 gulp.task('default', gulp.series(taskServer, taskWatch));
 
-gulp.task('build', () => {
-    let tasks = [taskClean, taskTemplates, taskStyles, taskScripts, taskImages, taskSprite, taskStatic];
-    if (cfg.options.revision) tasks.build.push(taskRevision);
-    if (cfg.options.deploy) tasks.build.push(taskDeploy);
+gulp.task('build', done => {
+
+    let tasks = [taskClean, taskSprite, taskImages, taskTemplates, taskStyles, taskScripts, taskStatics];
+
+    if (cfg.options.revision) tasks.push(taskRevision);
+    if (cfg.options.deploy) tasks.push(taskDeploy);
+    if (cfg.options.zip) tasks.push(taskArchive);
+
     tasks.push(taskSizereport);
-    gulp.series(tasks);
+
+    const series = gulp.series(tasks);
+
+    return series(done);
 });
 
 gulp.task(taskClean);

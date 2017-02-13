@@ -2,7 +2,7 @@ import gulp from 'gulp';
 import changed from 'gulp-changed';
 import imagemin from 'gulp-imagemin';
 
-import { browsersync } from '../server';
+import { browsersync } from './server';
 
 import cfg from '../config';
 

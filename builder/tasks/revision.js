@@ -10,7 +10,7 @@ function revision() {
     	.pipe(revall.revision(cfg.plugins.revall))
     	.pipe(revdel())
     	.pipe(gulp.dest(cfg.dirs.build))
-        .pipe(rev.manifestFile())
+        .pipe(revall.manifestFile())
         .pipe(gulp.dest(cfg.dirs.build));
 }
 

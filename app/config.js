@@ -1,3 +1,4 @@
+import imagemin from 'gulp-imagemin';
 import rollupBabel from 'rollup-plugin-babel';
 import rollupCommonjs from 'rollup-plugin-commonjs';
 import rollupNodeResolve from 'rollup-plugin-node-resolve';
@@ -90,17 +91,7 @@ const cfg = {
             shape: {
                 id: {
                     generator: (name, file) => `icon-${name.split('.')[0].toLowerCase()}`
-                },
-                transform: [
-                    'svgo',
-                    {
-                        replaceColor: function(shape, sprite, callback) {
-                            let svg = shape.svg.current.replace(/#222/g, 'currentColor');
-                            shape.setSVG(svg);
-                            callback(null);
-                        }
-                    }
-                ]
+                }
             },
             svg: {
                 xmlDeclaration: false,

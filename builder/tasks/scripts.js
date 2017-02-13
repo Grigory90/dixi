@@ -7,7 +7,7 @@ function scripts() {
 
     if (cfg.builder.prod) cfg.plugins.rollup.plugins.push(rollupUglify());
 
-    return rollup(options).then(bundle => bundle.write(options));
+    return rollup(cfg.plugins.rollup).then(bundle => bundle.write(cfg.plugins.rollup));
 }
 
 export default scripts;

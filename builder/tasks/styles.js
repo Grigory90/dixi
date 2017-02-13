@@ -6,7 +6,7 @@ import plumber from 'gulp-plumber';
 import sourcemaps from 'gulp-sourcemaps';
 import autoprefixer from 'gulp-autoprefixer';
 
-import { browsersync } from '../server';
+import { browsersync } from './server';
 import helper from '../helper';
 
 import cfg from '../config';

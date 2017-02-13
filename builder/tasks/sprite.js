@@ -7,7 +7,7 @@ function sprite() {
 
     return gulp.src(`${cfg.dirs.src}/icons/**/*.svg`)
         .pipe(svgsprite(cfg.plugins.svgsprite))
-        .pipe(gulp.dest(`${cfg.dirs.build}/img`));
+        .pipe(gulp.dest(`${cfg.dirs.src}/img`));
 }
 
 export default sprite;
