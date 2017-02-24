@@ -1,5 +1,10 @@
 # Changelog
 
+### 0.3.1 (Feb 24, 2017)
+
+    - Fixed image formats
+    - Update dependencies
+
 ### 0.3.0 (Feb 15, 2017)
 
     - Code refactoring
