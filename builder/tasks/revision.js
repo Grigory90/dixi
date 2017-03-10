@@ -6,12 +6,12 @@ import cfg from '../config';
 
 function revision() {
 
-    return gulp.src([`${cfg.dirs.build}/**/*.{html,css,js}`, `!${cfg.dirs.build}/**/vendor{,/**}`])
+    return gulp.src([`${cfg.dir.build}/**/*.{html,css,js}`, `!${cfg.dir.build}/**/vendor{,/**}`])
     	.pipe(revall.revision(cfg.plugins.revall))
     	.pipe(revdel())
-    	.pipe(gulp.dest(cfg.dirs.build))
+    	.pipe(gulp.dest(cfg.dir.build))
         .pipe(revall.manifestFile())
-        .pipe(gulp.dest(cfg.dirs.build));
+        .pipe(gulp.dest(cfg.dir.build));
 }
 
 export default revision;

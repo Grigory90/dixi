@@ -6,9 +6,9 @@ import cfg from '../config';
 
 function archive() {
 
-    return gulp.src(`${cfg.dirs.dist}/**`, {base: cfg.dirs.dist})
+    return gulp.src(`${cfg.dir.dist}/**`, {base: cfg.dir.dist})
         .pipe(zip(`${cfg.app.name}_${moment().format('HHmmss_DDMMYYYY')}.zip`))
-        .pipe(gulp.dest(cfg.dirs.dist));
+        .pipe(gulp.dest(cfg.dir.dist));
 
 }
 

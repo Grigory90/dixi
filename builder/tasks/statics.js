@@ -5,8 +5,8 @@ import cfg from '../config';
 
 function statics() {
 
-    const dest = cfg.dirs.build;
-    let stream = gulp.src(`${cfg.dirs.src}/static/**`);
+    const dest = cfg.dir.build;
+    let stream = gulp.src(`${cfg.dir.src}/static/**`);
 
     if (!cfg.builder.prod) stream = stream.pipe(changed(dest));
 

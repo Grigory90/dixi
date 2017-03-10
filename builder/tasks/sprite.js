@@ -5,9 +5,9 @@ import cfg from '../config';
 
 function sprite() {
 
-    return gulp.src(`${cfg.dirs.src}/icons/**/*.svg`)
+    return gulp.src(`${cfg.dir.src}/icons/**/*.svg`)
         .pipe(svgsprite(cfg.plugins.svgsprite))
-        .pipe(gulp.dest(`${cfg.dirs.src}/img`));
+        .pipe(gulp.dest(`${cfg.dir.src}/img`));
 }
 
 export default sprite;

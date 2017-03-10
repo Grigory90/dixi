@@ -4,7 +4,7 @@ import cfg from '../config';
 
 function clean() {
 
-    return del([`${cfg.dirs.dist}/**`, `!${cfg.dirs.dist}`]);
+    return del([`${cfg.dir.dist}/**`, `!${cfg.dir.dist}`]);
 
 }
 

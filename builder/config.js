@@ -8,8 +8,8 @@ const config = Object.assign(cfg, {
 });
 
 if (config.builder.prod) {
-    config.dirs.build = config.dirs.dist;
-    config.plugins.rollup.dest = `${config.dirs.build}/js/main.js`;
+    config.dir.build = config.dir.dist;
+    config.plugins.rollup.dest = `${config.dir.build}/js/main.js`;
 }
 
 export default config;

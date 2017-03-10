@@ -3,7 +3,7 @@ import rollupBabel from 'rollup-plugin-babel';
 import rollupCommonjs from 'rollup-plugin-commonjs';
 import rollupNodeResolve from 'rollup-plugin-node-resolve';
 
-const dirs = {
+const dir = {
     build: './app/build',
     dist: './app/dist',
     src: './app/src'
@@ -46,8 +46,8 @@ const cfg = {
         },
 
         rollup: {
-            entry: `${dirs.src}/js/main.js`,
-            dest: `${dirs.build}/js/main.js`,
+            entry: `${dir.src}/js/main.js`,
+            dest: `${dir.build}/js/main.js`,
             context: 'window',
             format: 'iife',
             globals: {
@@ -103,7 +103,8 @@ const cfg = {
         },
 
         revall: {
-            dontRenameFile: ['.html']
+            dontRenameFile: ['.html'],
+            fileNameManifest: 'manifest.json'
         },
 
         sizereport: {
@@ -114,7 +115,7 @@ const cfg = {
             open: false,
             notify: false,
             server: {
-                baseDir: dirs.build
+                baseDir: dir.build
             }
         },
 
@@ -124,6 +125,6 @@ const cfg = {
     }
 };
 
-cfg.dirs = dirs;
+cfg.dir = dir;
 
 export default cfg;

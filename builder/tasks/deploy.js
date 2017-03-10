@@ -17,7 +17,7 @@ function deploy(done) {
     const options = Object.assign(JSON.parse(fs.readFileSync(file, 'utf8')), cfg.plugins.ftp);
     const connect = ftp.create(options);
 
-    return gulp.src(`${cfg.dirs.dist}/**`, {base: cfg.dirs.dist, buffer: false})
+    return gulp.src(`${cfg.dir.dist}/**`, {base: cfg.dir.dist, buffer: false})
         .pipe(connect.dest(`./${cfg.app.name}`));
 }
 

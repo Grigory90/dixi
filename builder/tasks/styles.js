@@ -13,7 +13,7 @@ import cfg from '../config';
 
 function styles(done) {
 
-    let stream = gulp.src(`${cfg.dirs.src}/${cfg.options.preproc}/**/[^_]*.${cfg.options.preproc}`)
+    let stream = gulp.src(`${cfg.dir.src}/${cfg.options.preproc}/**/[^_]*.${cfg.options.preproc}`)
         .pipe(plumber(function(err) {
             console.log(err);
             this.emit('end');
@@ -37,7 +37,7 @@ function styles(done) {
 
     if (!cfg.builder.prod) stream = stream.pipe(sourcemaps.write());
 
-    return stream.pipe(gulp.dest(`${cfg.dirs.build}/css`))
+    return stream.pipe(gulp.dest(`${cfg.dir.build}/css`))
         .pipe(browsersync.stream());
 }
 

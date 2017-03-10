@@ -8,8 +8,8 @@ import cfg from '../config';
 
 function images() {
 
-    let dest = `${cfg.dirs.build}/img`;
-    let stream = gulp.src(`${cfg.dirs.src}/img/**/*.{svg,png,jpg,gif,ico}`);
+    let dest = `${cfg.dir.build}/img`;
+    let stream = gulp.src(`${cfg.dir.src}/img/**/*.{svg,png,jpg,gif,ico}`);
 
     if (!cfg.builder.prod) stream = stream.pipe(changed(dest));
 
