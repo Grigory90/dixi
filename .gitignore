@@ -1,8 +1,4 @@
-app/build
-app/dist
 node_modules
 
 npm-debug.log
-.ftp
-.jshintrc
 .tern-project

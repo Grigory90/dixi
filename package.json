@@ -1,33 +1,52 @@
 {
-  "name": "project-builder",
-  "version": "0.3.2",
-  "description": "Simply project builder based on Gulp",
-  "author": "Grigory S. <grigorysergeevich@gmail.com>",
-  "license": "MIT",
+  "name": "dixi",
+  "version": "1.0.0-rc.0",
+  "description": "Simply project builder based on Gulp 4 and Webpack 2",
+  "author": "Grigory K. <grigorysergeevich@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/grigory90/project-builder"
+    "url": "https://github.com/grigory90/dixi"
   },
   "bugs": {
-    "url": "https://github.com/grigory90/project-builder/issues"
+    "url": "https://github.com/grigory90/dixi/issues"
   },
-  "homepage": "https://github.com/grigory90/project-builder",
+  "homepage": "https://github.com/grigory90/dixi",
+  "license": "MIT",
   "keywords": [
     "builder",
     "starter"
   ],
-  "scripts": {
-    "start": "gulp",
-    "build": "gulp build --prod",
-    "deploy": "gulp deploy",
-    "clean": "gulp clean"
+  "engines": {
+    "node": ">= 6"
   },
-  "devDependencies": {
+  "preferGlobal": true,
+  "bin": "./bin/dixi.js",
+  "main": "./lib/index.js",
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "scripts": {
+      "test": "xo ./lib/** !./lib/data/app/**"
+  },
+  "xo": {
+      "space": 4,
+      "rules": {
+          "padded-blocks": "off",
+          "unicorn/no-process-exit": "off",
+          "import/order": "off",
+          "import/no-unresolved": "off",
+          "import/no-dynamic-require": "off"
+      }
+  },
+  "dependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.4.0",
     "babel-preset-es2015": "^6.22.0",
-    "babel-preset-es2015-rollup": "^3.0.0",
     "browser-sync": "^2.18.8",
     "chalk": "^1.1.3",
     "del": "^2.2.2",
+    "fs-extra": "^2.0.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-changed": "^2.0.0",
@@ -44,12 +63,12 @@
     "gulp-twig": "^0.7.0",
     "gulp-zip": "^4.0.0",
     "moment": "^2.17.1",
-    "rollup": "^0.41.4",
-    "rollup-plugin-babel": "^2.7.1",
-    "rollup-plugin-commonjs": "^7.1.0",
-    "rollup-plugin-node-resolve": "^2.0.0",
-    "rollup-plugin-uglify": "^1.0.1",
-    "vinyl-ftp": "^0.6.0"
+    "uglifyjs-webpack-plugin": "^0.3.0",
+    "vinyl-ftp": "^0.6.0",
+    "webpack": "^2.2.1",
+    "yargs": "^7.0.2"
   },
-  "dependencies": {}
+  "devDependencies": {
+    "xo": "^0.17.1"
+  }
 }
