@@ -1,3 +1,5 @@
+[![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg?style=flat-square)](https://github.com/Grigory90/dixi)
+
 # Dixi
 
 > Simply project builder based on Gulp 4 and Webpack 2.
@@ -10,7 +12,7 @@
 $ npm i -g dixi
 ```
 
-### Use in your project
+### Usage in your project
 
 Run init command in the project root directory:
 
@@ -23,7 +25,7 @@ Set the base options in **builder.config.js** file:
 ``` javascript
 {
     preproc: 'scss',         // css preprocessor, sass or less
-    
+
     revision: false,         // appends content hash to each filename
 
     deploy: false,           // deploy project using ftp
