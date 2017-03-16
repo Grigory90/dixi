@@ -20,7 +20,7 @@ Run init command in the project root directory:
 $ dixi init -s     # key -s create samples folder, optional
 ```
 
-Set the base options in **builder.config.js** file:
+Set the base options in **dixi.config.js** file:
 
 ``` javascript
 {
