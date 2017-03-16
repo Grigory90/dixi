@@ -1,4 +1,4 @@
-[![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg?style=flat-square)](https://github.com/Grigory90/dixi)
+[![Travis](https://img.shields.io/travis/rust-lang/rust/master.svg?style=flat-square)](https://travis-ci.org/Grigory90/dixi)
 
 # Dixi
 
@@ -43,7 +43,7 @@ Start server and watchers:
 $ dixi run
 ```
 
-##### Project structure
+##### Project structure:
 
 ``` bash
 .
@@ -61,7 +61,7 @@ $ dixi run
 └─ package.json
 ```
 
-##### Commands
+##### Commands:
 
 ``` bash
 $ dixi                      # reference

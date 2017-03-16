@@ -13,7 +13,9 @@
   "homepage": "https://github.com/grigory90/dixi",
   "license": "MIT",
   "keywords": [
+    "project-builder",
     "builder",
+    "starter-kit",
     "starter"
   ],
   "engines": {
