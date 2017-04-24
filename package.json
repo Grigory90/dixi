@@ -29,17 +29,17 @@
     "lib"
   ],
   "scripts": {
-      "test": "xo ./lib/** !./lib/data/app/**"
+    "test": "xo ./lib/** !./lib/data/app/**"
   },
   "xo": {
-      "space": 4,
-      "rules": {
-          "padded-blocks": "off",
-          "unicorn/no-process-exit": "off",
-          "import/order": "off",
-          "import/no-unresolved": "off",
-          "import/no-dynamic-require": "off"
-      }
+    "space": 4,
+    "rules": {
+      "padded-blocks": "off",
+      "unicorn/no-process-exit": "off",
+      "import/order": "off",
+      "import/no-unresolved": "off",
+      "import/no-dynamic-require": "off"
+    }
   },
   "dependencies": {
     "babel-core": "^6.24.1",
@@ -54,7 +54,6 @@
     "gulp-changed": "^2.0.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-imagemin": "^3.2.0",
-    "gulp-less": "^3.3.0",
     "gulp-plumber": "^1.1.0",
     "gulp-rev-all": "^0.9.7",
     "gulp-rev-delete-original": "^0.2.3",
