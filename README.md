@@ -1,5 +1,11 @@
 [![Travis](https://img.shields.io/travis/rust-lang/rust/master.svg?style=flat-square)](https://travis-ci.org/Grigory90/dixi)
 
+<p align="center">
+    <img width="120" height="120" src="https://grigorys.me/images/dixi.png">
+</p>
+
+---
+
 # Dixi
 
 > Simply project builder based on Gulp 4 and Webpack 2.
@@ -24,16 +30,13 @@ Set the base options in **dixi.config.js** file:
 
 ``` javascript
 {
-    preproc: 'scss',         // css preprocessor, sass or less
 
-    revision: false,         // appends content hash to each filename
+    revision: false,     // appends content hash to each filename
 
-    deploy: false,           // deploy project using ftp
+    deploy: false,       // deploy project using ftp
 
-    archive: false,          // create build zip
+    archive: false,      // create build zip
 
-    defaultName: 'project'   // the default project name, if there is no package file
-                             // (used in archive filename and remote folder name)
 }
 ```
 
@@ -53,7 +56,7 @@ $ dixi run
 │   │   ├─ icons
 │   │   ├─ img
 │   │   ├─ js
-│   │   ├─ sass/less
+│   │   ├─ scss
 │   │   └─ static
 │   ├─ dev          
 │   └─ build
