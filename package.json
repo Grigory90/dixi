@@ -54,7 +54,6 @@
     "gulp-changed": "^2.0.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-imagemin": "^3.2.0",
-    "gulp-plumber": "^1.1.0",
     "gulp-rev-all": "^0.9.7",
     "gulp-rev-delete-original": "^0.2.3",
     "gulp-sass": "^3.1.0",
