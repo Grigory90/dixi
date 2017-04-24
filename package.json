@@ -1,6 +1,6 @@
 {
   "name": "dixi",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0-rc.2",
   "description": "Simply project builder based on Gulp 4 and Webpack 2",
   "author": "Grigory K. <grigorysergeevich@gmail.com>",
   "repository": {
