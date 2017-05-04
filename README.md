@@ -1,24 +1,18 @@
-[![Travis](https://img.shields.io/travis/rust-lang/rust/master.svg?style=flat-square)](https://travis-ci.org/Grigory90/dixi)
-
-<p align="center">
+<h1 align="center">
     <img width="120" height="120" src="https://grigorys.me/images/dixi.png">
-</p>
+</h1>
 
----
-
-# Dixi
+[![Travis](https://img.shields.io/travis/rust-lang/rust/master.svg?style=flat-square)](https://travis-ci.org/Grigory90/dixi)
 
 > Simply project builder based on Gulp 4 and Webpack 2.
 
-## Usage
-
-### Installation
+## Installation
 
 ```
 $ npm i -g dixi
 ```
 
-### Usage in your project
+## Usage in your project
 
 Run init command in the project root directory:
 
@@ -46,7 +40,7 @@ Start server and watchers:
 $ dixi run
 ```
 
-##### Project structure:
+## Project structure:
 
 ``` bash
 .
@@ -64,7 +58,7 @@ $ dixi run
 └─ package.json
 ```
 
-##### Commands:
+## Commands:
 
 ``` bash
 $ dixi                      # reference
