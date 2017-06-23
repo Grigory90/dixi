@@ -25,11 +25,13 @@ Set the base options in **dixi.config.js** file:
 ``` javascript
 {
 
-    revision: false,     // appends content hash to each filename
+    revision: false,       // appends content hash to each filename
 
-    deploy: false,       // deploy project using ftp
+    deploy: false,         // deploy project using ftp
 
-    archive: false,      // create build zip
+    archive: false,        // create build zip
+
+    includeSources: false  // include sources in build
 
 }
 ```
