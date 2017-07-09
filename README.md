@@ -4,7 +4,7 @@
 
 [![Travis](https://img.shields.io/travis/rust-lang/rust/master.svg?style=flat-square)](https://travis-ci.org/Grigory90/dixi)
 
-> Simply project builder based on Gulp 4 and Webpack 2.
+> Simply project builder based on Gulp 4 and Webpack 3.
 
 ## Installation
 
