@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img width="120" height="120" src="https://grigorys.me/images/dixi.png">
+    <img width="120" height="120" src="https://cdn.rawgit.com/Grigory90/dixi/88ce9c9c/media/logo.png">
 </h1>
 
 [![Travis](https://img.shields.io/travis/rust-lang/rust/master.svg?style=flat-square)](https://travis-ci.org/Grigory90/dixi)
