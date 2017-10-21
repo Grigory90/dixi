@@ -2,7 +2,7 @@
     <img width="120" height="120" src="https://cdn.rawgit.com/Grigory90/dixi/88ce9c9c/media/logo.png">
 </h1>
 
-[![Travis](https://img.shields.io/travis/rust-lang/rust/master.svg?style=flat-square)](https://travis-ci.org/Grigory90/dixi)
+[![Build Status](https://travis-ci.org/Grigory90/dixi.svg?branch=master)](https://travis-ci.org/Grigory90/dixi)
 
 > Simply project builder based on Gulp 4 and Webpack 3.
 
