@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img width="120" height="120" src="https://cdn.rawgit.com/grig0ry/dixi/88ce9c9c/media/dixi.svg">
+    <img width="120" height="120" src="https://cdn.rawgit.com/grig0ry/dixi/75285ac9/media/dixi.svg">
 </h1>
 
 [![Build Status](https://travis-ci.org/grig0ry/dixi.svg?branch=master)](https://travis-ci.org/grig0ry/dixi)
