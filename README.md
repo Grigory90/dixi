@@ -1,8 +1,8 @@
 <h1 align="center">
-    <img width="120" height="120" src="https://cdn.rawgit.com/Grigory90/dixi/88ce9c9c/media/dixi.svg">
+    <img width="120" height="120" src="https://cdn.rawgit.com/grig0ry/dixi/88ce9c9c/media/dixi.svg">
 </h1>
 
-[![Build Status](https://travis-ci.org/Grigory90/dixi.svg?branch=master)](https://travis-ci.org/Grigory90/dixi)
+[![Build Status](https://travis-ci.org/grig0ry/dixi.svg?branch=master)](https://travis-ci.org/grig0ry/dixi)
 
 > Simply project builder based on Gulp 4 and Webpack 3.
 
