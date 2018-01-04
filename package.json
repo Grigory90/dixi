@@ -19,7 +19,8 @@
   "files": [
     "bin",
     "lib",
-    "data"
+    "data",
+    "test.js"
   ],
   "scripts": {
     "test": "xo && ava"
