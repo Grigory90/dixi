@@ -2,39 +2,28 @@
     <img width="120" height="120" src="https://cdn.rawgit.com/grig0ry/dixi/75285ac9/media/dixi.svg">
 </h1>
 
-[![Build Status](https://travis-ci.org/grig0ry/dixi.svg?branch=master)](https://travis-ci.org/grig0ry/dixi)
+[![Build Status](https://img.shields.io/travis/grig0ry/dixi/master.svg?style=flat-square)](https://travis-ci.org/grig0ry/dixi)
+[![Dependency Status](https://img.shields.io/david/grig0ry/dixi.svg?style=flat-square)](https://david-dm.org/grig0ry/dixi)
 
-> Simply project builder based on Gulp 4 and Webpack 3.
+> It is a tool for assembling prototypes and simple web pages, based on Gulp 4 and Webpack 3.
 
-## Installation
+## Getting Started
+
+### Installation
 
 ```
 $ npm i -g dixi
 ```
 
-## Usage in your project
+### Usage
 
-Run init command in the project root directory:
+Run `init` command in the project root directory:
 
 ``` bash
-$ dixi init -s     # key -s create samples folder, optional
+$ dixi init
 ```
 
-Set the base options in **dixi.config.js** file:
-
-``` javascript
-{
-
-    revision: false,       // appends content hash to each filename
-
-    deploy: false,         // deploy project using ftp
-
-    archive: false,        // create build zip
-
-    includeSources: false  // include sources in build
-
-}
-```
+Set the base options in [`dixi.config.js`](https://github.com/grig0ry/dixi/blob/master/data/dixi.config.js) file. (See [options](#options))
 
 Start server and watchers:
 
@@ -42,7 +31,9 @@ Start server and watchers:
 $ dixi run
 ```
 
-## Project structure:
+## Documentation
+
+### Project structure
 
 ``` bash
 .
@@ -50,25 +41,57 @@ $ dixi run
 │   ├─ src
 │   │   ├─ twig
 │   │   ├─ icons
-│   │   ├─ img
 │   │   ├─ js
 │   │   ├─ scss
-│   │   └─ static
+│   │   ├─ static
+│   │   └─ data.json
 │   ├─ dev          
 │   └─ build
 ├─ dixi.config.js
 └─ package.json
 ```
 
-## Commands:
+### Commands
 
 ``` bash
-$ dixi                      # reference
+$ dixi # Reference
 
-$ dixi init [-s, --sample]  # create config file
-                            # [-s, --sample] create samples folder
+$ dixi init  # Initialize project
 
-$ dixi run                  # start server and watchers
+$ dixi run  # Start server and watchers
 
-$ dixi build                # build project
+$ dixi build # Build project
 ```
+
+### Options
+
+#### enableRevision
+
+- value <[boolean]>
+- default `false`
+
+Static asset revisioning by appending content hash to filenames.
+
+#### createArchive
+
+- value <[boolean]>
+- default `false`
+
+Creates zip archive with production files.
+
+#### includeSources
+
+- value <[boolean]>
+- default `false`
+
+Copies the source files to the assembly folder.
+
+#### browsersList
+
+- value <[Array]>
+- default `['last 2 versions', '> 2%', 'ie >= 11']`
+
+Browsers list for [babel-preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env) and [autoprefixer](https://github.com/postcss/autoprefixer). See [browserslist](https://github.com/ai/browserslist) for more info.
+
+[Array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array "Array"
+[boolean]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type "Boolean"
