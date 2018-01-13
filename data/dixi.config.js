@@ -10,7 +10,9 @@ const baseOptions = {
     createArchive: false,
     includeSources: false,
 
-    browsersList: ['last 2 versions', '> 2%', 'ie >= 11']
+    browsersList: ['last 2 versions', '> 2%', 'ie >= 11'],
+
+    extend: null
 };
 
 const pluginOptions = {
@@ -70,7 +72,7 @@ const pluginOptions = {
             xmlDeclaration: false,
             doctypeDeclaration: false,
             rootAttributes: {
-                style: 'position:absolute;width:0;height:0;overflow:hidden'
+                class: 'visually-hidden'
             }
         }
     },
@@ -78,11 +80,6 @@ const pluginOptions = {
     rev: {
         manifestName: 'assets.json',
         manifestOptions: {}
-    },
-
-    sizereport: {
-        gzip: true,
-        showFiles: true
     },
 
     browsersync: {

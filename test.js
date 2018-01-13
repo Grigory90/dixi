@@ -1,50 +1,57 @@
 import { existsSync } from 'fs';
-import { resolve } from 'path';
+import { join } from 'path';
 import { fork } from 'child_process';
 import test from 'ava';
 import del from 'del';
 
-function dixi(args = []) {
+function dixi(...args) {
 
-    const modulePath = resolve(__dirname, './bin/dixi');
-    const basePath = resolve(__dirname, './fixtures');
+    const modPath = join(__dirname, 'cli.js');
+    const cwdPath = join(__dirname, 'fixtures');
 
-    return fork(modulePath, args, { cwd: basePath, silent: true });
+    return fork(modPath, args, { cwd: cwdPath, silent: true });
 }
 
 test.cb('Run dixi without arguments', (t) => {
 
+    let stdout = '';
     const program = dixi();
+
+    program.stdout.on('data', (buffer) => {
+
+        stdout = buffer.toString();
+    });
 
     program.on('close', (code) => {
 
         t.deepEqual(0, code);
+        t.regex(stdout, /Usage:\n\s{8}dixi <command>/);
         t.end();
     });
 });
 
 test.cb('Run dixi [--help]', (t) => {
 
-    let stdout;
-    const program = dixi(['--help']);
+    let stdout = '';
+    const program = dixi('--help');
 
     program.stdout.on('data', (buffer) => {
 
-        stdout += buffer.toString();
+        stdout = buffer.toString();
     });
 
     program.on('close', (code) => {
 
         t.deepEqual(0, code);
-        t.regex(stdout, /Usage: dixi <command>/);
+        t.regex(stdout, /Usage:\n\s{8}dixi <command>/);
         t.end();
     });
 });
 
 test.cb('Run dixi <build>', (t) => {
 
-    let stdout;
-    const program = dixi(['build']);
+    let stdout = '';
+    const program = dixi('build');
 
     program.stdout.on('data', (buffer) => {
 

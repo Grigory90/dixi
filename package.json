@@ -13,14 +13,13 @@
     "prototyping"
   ],
   "engines": {
-    "node": ">=6"
+    "node": ">=6.5"
   },
-  "bin": "./bin/dixi.js",
+  "bin": "cli.js",
   "files": [
     "bin",
     "lib",
-    "data",
-    "test.js"
+    "data"
   ],
   "scripts": {
     "test": "xo && ava"
@@ -47,29 +46,29 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
-    "browser-sync": "^2.23.2",
+    "browser-sync": "^2.23.6",
     "chalk": "^2.3.0",
     "del": "^3.0.0",
-    "fs-extra": "^5.0.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^4.1.0",
     "gulp-changed": "^3.2.0",
     "gulp-cssnano": "^2.1.2",
     "gulp-rev": "^8.1.1",
     "gulp-rev-delete-original": "^0.2.3",
-    "gulp-rev-replace": "^0.4.3",
+    "gulp-rev-replace": "^0.4.4",
     "gulp-sass": "^3.1.0",
-    "gulp-size": "^3.0.0",
-    "gulp-sourcemaps": "^2.6.3",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-svg-sprite": "^1.3.7",
-    "gulp-twig": "^1.1.1",
+    "gulp-twig": "^1.2.0",
     "gulp-zip": "^4.1.0",
-    "uglifyjs-webpack-plugin": "^1.1.5",
+    "import-modules": "^1.1.0",
+    "lodash": "^4.17.5",
+    "uglifyjs-webpack-plugin": "^1.1.8",
     "webpack": "^3.10.0",
-    "yargs": "^10.0.3"
+    "yargs-parser": "^9.0.2"
   },
   "devDependencies": {
-    "ava": "^0.24.0",
+    "ava": "^0.25.0",
     "xo": "^0.18.2"
   }
 }

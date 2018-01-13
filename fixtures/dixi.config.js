@@ -40,7 +40,8 @@ const pluginOptions = {
             new webpack.ProvidePlugin({
                 $: 'jquery',
                 jQuery: 'jquery'
-            })
+            }),
+            new webpack.optimize.ModuleConcatenationPlugin()
         ],
         babelLoader: {
             presets: [
@@ -78,11 +79,6 @@ const pluginOptions = {
     rev: {
         manifestName: 'assets.json',
         manifestOptions: {}
-    },
-
-    sizereport: {
-        gzip: true,
-        showFiles: true
     },
 
     browsersync: {

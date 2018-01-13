@@ -93,5 +93,36 @@ Copies the source files to the assembly folder.
 
 Browsers list for [babel-preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env) and [autoprefixer](https://github.com/postcss/autoprefixer). See [browserslist](https://github.com/ai/browserslist) for more info.
 
-[Array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array "Array"
-[boolean]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type "Boolean"
+#### extend(cfg, gulp, Message)
+
+- `cfg` <[Object]> Configuration object.
+- `gulp` <[Function]> Gulp Instance.
+- `Message` <[Class]> Messages [`class`](https://github.com/grig0ry/dixi/blob/master/lib/util.js).
+- return: <[Object]> Return configuration object (required)
+
+This function allows you to change the configuration, create custom tasks, change the task queue, and so on.
+
+```
+const baseOptions = {
+
+    extend: (cfg, gulp, Message) => {
+
+    	gulp.task('customTask', () => {
+
+    		Message.log('Custom task.');
+
+    		return Promise.resolve();
+    	});
+
+    	cfg.builder.task.build.push('customTask');
+
+    	return cfg;
+    }
+};
+```
+
+[Class]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class "Class"
+[Function]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function "Function"
+[Object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object  "Object"
+[Array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array  "Array"
+[boolean]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type  "Boolean"
