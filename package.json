@@ -1,6 +1,6 @@
 {
   "name": "dixi",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "It is a tool for assembling prototypes and simple web pages, based on Gulp 4 and Webpack 3.",
   "author": "Grigory K. <grigorysergeevich@gmail.com>",
   "repository": "github:grig0ry/dixi",
