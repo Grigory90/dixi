@@ -102,7 +102,7 @@ Browsers list for [babel-preset-env](https://github.com/babel/babel/tree/master/
 
 This function allows you to change the configuration, create custom tasks, change the task queue, and so on.
 
-```
+``` js
 const baseOptions = {
 
     extend: (cfg, gulp, Message) => {
