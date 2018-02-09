@@ -17,9 +17,9 @@
   },
   "bin": "cli.js",
   "files": [
-    "bin",
     "lib",
-    "data"
+    "data",
+    "cli.js"
   ],
   "scripts": {
     "test": "xo && ava"
