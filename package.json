@@ -47,7 +47,7 @@
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.23.6",
-    "chalk": "^2.3.0",
+    "chalk": "^2.3.1",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^4.1.0",
@@ -64,11 +64,11 @@
     "import-modules": "^1.1.0",
     "lodash": "^4.17.5",
     "uglifyjs-webpack-plugin": "^1.1.8",
-    "webpack": "^3.10.0",
+    "webpack": "^3.11.0",
     "yargs-parser": "^9.0.2"
   },
   "devDependencies": {
     "ava": "^0.25.0",
-    "xo": "^0.18.2"
+    "xo": "^0.20.2"
   }
 }
