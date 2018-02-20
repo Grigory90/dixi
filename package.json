@@ -63,12 +63,12 @@
     "gulp-zip": "^4.1.0",
     "import-modules": "^1.1.0",
     "lodash": "^4.17.5",
-    "uglifyjs-webpack-plugin": "^1.1.8",
+    "uglifyjs-webpack-plugin": "^1.2.0",
     "webpack": "^3.11.0",
     "yargs-parser": "^9.0.2"
   },
   "devDependencies": {
     "ava": "^0.25.0",
-    "xo": "^0.20.2"
+    "xo": "^0.20.3"
   }
 }
