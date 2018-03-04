@@ -42,7 +42,8 @@ const pluginOptions = {
             new webpack.ProvidePlugin({
                 $: 'jquery',
                 jQuery: 'jquery'
-            })
+            }),
+            new webpack.optimize.ModuleConcatenationPlugin()
         ],
         babelLoader: {
             presets: [
