@@ -114,7 +114,7 @@ const baseOptions = {
     		return Promise.resolve();
     	});
 
-    	cfg.builder.task.build.push('customTask');
+    	cfg.builder.tasks.build.push('customTask');
 
     	return cfg;
     }

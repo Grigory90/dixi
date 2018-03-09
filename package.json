@@ -36,6 +36,7 @@
       ],
       "object-curly-spacing": "off",
       "padded-blocks": "off",
+      "prefer-destructuring": "off",
       "unicorn/no-process-exit": "off",
       "import/order": "off",
       "import/no-unresolved": "off",
@@ -62,7 +63,6 @@
     "gulp-twig": "^1.2.0",
     "gulp-zip": "^4.1.0",
     "import-modules": "^1.1.0",
-    "lodash": "^4.17.5",
     "uglifyjs-webpack-plugin": "^1.2.2",
     "webpack": "^3.11.0",
     "yargs-parser": "^9.0.2"
