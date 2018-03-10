@@ -65,7 +65,8 @@ const pluginOptions = {
         },
         shape: {
             id: {
-                generator: name => `icon-${name.split('.')[0].toLowerCase()}`
+                separator: '-',
+                generator: 'icon-%s'
             }
         },
         svg: {
