@@ -42,12 +42,11 @@ const pluginOptions = {
             new webpack.ProvidePlugin({
                 $: 'jquery',
                 jQuery: 'jquery'
-            }),
-            new webpack.optimize.ModuleConcatenationPlugin()
+            })
         ],
         babelLoader: {
             presets: [
-                ['env', {
+                ['@babel/preset-env', {
                     targets: {
                         browsers: baseOptions.browsersList
                     },

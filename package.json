@@ -13,7 +13,7 @@
     "prototyping"
   ],
   "engines": {
-    "node": ">=6.5"
+    "node": ">=6.11.5"
   },
   "bin": "cli.js",
   "files": [
@@ -44,9 +44,9 @@
     }
   },
   "dependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.6.1",
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "babel-loader": "^8.0.0-beta.2",
     "browser-sync": "^2.23.6",
     "chalk": "^2.3.2",
     "del": "^3.0.0",
@@ -63,8 +63,7 @@
     "gulp-twig": "^1.2.0",
     "gulp-zip": "^4.1.0",
     "import-modules": "^1.1.0",
-    "uglifyjs-webpack-plugin": "^1.2.2",
-    "webpack": "^3.11.0",
+    "webpack": "^4.1.1",
     "yargs-parser": "^9.0.2"
   },
   "devDependencies": {
