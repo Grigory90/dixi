@@ -1,16 +1,18 @@
 const dirs = {
     src: '../data/app/src',
-    dev: './dev',
-    build: './build'
+    dev: './app/dev',
+    build: './app/build'
 };
 
 const baseOptions = {
 
-    enableRevision: true,
-    createArchive: true,
-    includeSources: true,
+    enableRevision: false,
+    createArchive: false,
+    includeSources: false,
 
-    browsersList: ['last 2 versions', '> 2%', 'ie >= 11']
+    browsersList: ['last 2 versions', '> 2%', 'ie >= 11'],
+
+    extend: false
 };
 
 const pluginOptions = {
@@ -40,12 +42,11 @@ const pluginOptions = {
             new webpack.ProvidePlugin({
                 $: 'jquery',
                 jQuery: 'jquery'
-            }),
-            new webpack.optimize.ModuleConcatenationPlugin()
+            })
         ],
         babelLoader: {
             presets: [
-                ['env', {
+                ['@babel/preset-env', {
                     targets: {
                         browsers: baseOptions.browsersList
                     },
@@ -64,14 +65,15 @@ const pluginOptions = {
         },
         shape: {
             id: {
-                generator: name => `icon-${name.split('.')[0].toLowerCase()}`
+                separator: '-',
+                generator: 'icon-%s'
             }
         },
         svg: {
             xmlDeclaration: false,
             doctypeDeclaration: false,
             rootAttributes: {
-                style: 'position:absolute;width:0;height:0;overflow:hidden'
+                class: 'visually-hidden'
             }
         }
     },

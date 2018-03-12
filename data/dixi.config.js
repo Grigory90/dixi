@@ -12,7 +12,7 @@ const baseOptions = {
 
     browsersList: ['last 2 versions', '> 2%', 'ie >= 11'],
 
-    extend: null
+    extend: false
 };
 
 const pluginOptions = {
