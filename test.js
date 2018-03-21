@@ -62,12 +62,12 @@ test.cb('Run dixi <build>', (t) => {
 
         t.deepEqual(0, code);
         t.regex(stdout, /Finished '\u001b\[36mbuild\u001b\[39m' after/);
-        t.true(existsSync('./fixtures/build'));
+        t.true(existsSync('./fixtures/app/build'));
         t.end();
     });
 });
 
 test.after('Cleanup', () => {
 
-    return del(['./fixtures/build/**', './fixtures/dev/**']);
+    return del('./fixtures/app/**');
 });

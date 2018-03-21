@@ -37,6 +37,7 @@
       "object-curly-spacing": "off",
       "padded-blocks": "off",
       "prefer-destructuring": "off",
+      "no-control-regex": "off",
       "unicorn/no-process-exit": "off",
       "import/order": "off",
       "import/no-unresolved": "off",

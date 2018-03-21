@@ -1,5 +1,4 @@
 node_modules
-fixtures/build
-fixtures/dev
+fixtures/app
 npm-debug.log
 .tern-project
