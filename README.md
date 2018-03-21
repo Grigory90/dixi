@@ -5,7 +5,7 @@
 [![Build Status](https://img.shields.io/travis/grig0ry/dixi/master.svg?style=flat-square)](https://travis-ci.org/grig0ry/dixi)
 [![Dependency Status](https://img.shields.io/david/grig0ry/dixi.svg?style=flat-square)](https://david-dm.org/grig0ry/dixi)
 
-> It is a tool for assembling prototypes and simple web pages, based on Gulp 4 and Webpack 3.
+> It is a tool for assembling prototypes and simple web pages, based on Gulp and Webpack.
 
 ## Getting Started
 
