@@ -45,9 +45,9 @@
     }
   },
   "dependencies": {
-    "@babel/core": "^7.0.0-beta.46",
-    "@babel/preset-env": "^7.0.0-beta.46",
-    "babel-loader": "^8.0.0-beta.2",
+    "@babel/core": "^7.0.0-beta.51",
+    "@babel/preset-env": "^7.0.0-beta.51",
+    "babel-loader": "^8.0.0-beta.3",
     "browser-sync": "^2.24.4",
     "chalk": "^2.4.1",
     "del": "^3.0.0",
@@ -64,11 +64,11 @@
     "gulp-twig": "^1.2.0",
     "gulp-zip": "^4.1.0",
     "import-modules": "^1.1.0",
-    "webpack": "^4.8.1",
+    "webpack": "^4.12.0",
     "yargs-parser": "^10.0.0"
   },
   "devDependencies": {
     "ava": "^0.25.0",
-    "xo": "^0.21.0"
+    "xo": "^0.21.1"
   }
 }

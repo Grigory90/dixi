@@ -10,7 +10,7 @@ const baseOptions = {
     createArchive: false,
     includeSources: false,
 
-    browsersList: ['last 2 versions', '> 2%', 'ie >= 11'],
+    browsersList: ['defaults'],
 
     extend: false
 };

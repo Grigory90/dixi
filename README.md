@@ -89,7 +89,7 @@ Copies the source files to the assembly folder.
 #### browsersList
 
 - value <[Array]>
-- default `['last 2 versions', '> 2%', 'ie >= 11']`
+- default `['defaults']`
 
 Browsers list for [babel-preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env) and [autoprefixer](https://github.com/postcss/autoprefixer). See [browserslist](https://github.com/ai/browserslist) for more info.
 
@@ -105,10 +105,10 @@ This function allows you to change the configuration, create custom tasks, chang
 ``` js
 const baseOptions = {
 
-    extend: (cfg, gulp, Message) => {
-
-    	gulp.task('customTask', () => {
-
+    extend: (cfg, gulp, Message) =>
+    {
+    	gulp.task('customTask', () =>
+        {
     		Message.log('Custom task.');
 
     		return Promise.resolve();
