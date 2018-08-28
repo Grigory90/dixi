@@ -2,8 +2,7 @@ language: node_js
 node_js:
     - "6"
     - "8"
-    - "9"
 matrix:
     fast_finish: true
 before_install:
-    - npm install --global dixi
+    - npm i dixi -g

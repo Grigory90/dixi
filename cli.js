@@ -37,9 +37,12 @@ if (isVersion) {
 
 const gulp = join(__dirname, 'node_modules/gulp/bin/gulp');
 const gulpArgs = [
-    '--gulpfile', join(__dirname, 'lib/gulpfile.js'),
-    '--cwd', process.cwd(),
-    '--root', __dirname,
+    '--gulpfile',
+    join(__dirname, 'lib/gulpfile.js'),
+    '--cwd',
+    process.cwd(),
+    '--root',
+    __dirname,
     '--color'
 ];
 
