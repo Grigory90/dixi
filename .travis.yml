@@ -1,8 +1,8 @@
 language: node_js
 node_js:
-    - "6"
     - "8"
+    - "10"
 matrix:
     fast_finish: true
 before_install:
-    - npm i dixi -g
+    - npm i @dixi/core -g

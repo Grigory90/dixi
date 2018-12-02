@@ -1,74 +1,55 @@
 {
-  "name": "dixi",
-  "version": "2.4.1",
-  "description": "It is a tool for assembling prototypes and simple web pages, based on Gulp and Webpack",
-  "author": "Grigory K. <grigorysergeevich@gmail.com>",
-  "repository": "github:grig0ry/dixi",
-  "homepage": "https://github.com/grig0ry/dixi",
-  "bugs": "https://github.com/grig0ry/dixi/issues",
+  "name": "@dixi/core",
+  "version": "3.0.0-rc.0",
+  "description": "",
+  "author": "Grigory Kozulya <hello@grigory.one>",
   "license": "MIT",
-  "keywords": [
-    "builder",
-    "assembling",
-    "prototyping"
-  ],
   "engines": {
-    "node": ">=6.11.5"
+    "node": ">=8.5"
   },
-  "bin": "cli.js",
+  "bin": {
+    "di": "cli.js"
+  },
   "files": [
     "lib",
-    "data",
-    "cli.js"
+    "cli.js",
+    "index.js"
   ],
   "scripts": {
-    "test": "xo && ava"
+    "test": "eslint **/*.js"
   },
-  "xo": {
-    "space": 4,
-    "rules": {
-      "arrow-parens": [
-        "error",
-        "as-needed",
-        {
-          "requireForBlockBody": true
-        }
-      ],
-      "object-curly-spacing": "off",
-      "padded-blocks": "off",
-      "prefer-destructuring": "off",
-      "no-control-regex": "off",
-      "unicorn/no-process-exit": "off",
-      "import/order": "off",
-      "import/no-unresolved": "off",
-      "import/no-dynamic-require": "off"
-    }
+  "devDependencies": {
+    "eslint": "^5.9.0"
   },
   "dependencies": {
-    "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "babel-loader": "^8.0.0",
-    "browser-sync": "^2.24.7",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "archiver": "^3.0.0",
+    "babel-loader": "^8.0.4",
+    "basic-ftp": "^2.16.1",
+    "browser-sync": "^2.26.3",
     "chalk": "^2.4.1",
+    "commander": "^2.19.0",
     "del": "^3.0.0",
+    "dotenv": "^6.1.0",
+    "glob": "^7.1.3",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-changed": "^3.2.0",
     "gulp-cssnano": "^2.1.3",
-    "gulp-rev": "^8.1.1",
+    "gulp-nunjucks-render": "^2.2.2",
+    "gulp-rev": "^9.0.0",
+    "gulp-rev-collector": "^1.3.1",
     "gulp-rev-delete-original": "^0.2.3",
-    "gulp-rev-replace": "^0.4.4",
-    "gulp-sass": "^4.0.1",
+    "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.4",
-    "gulp-svg-sprite": "^1.4.0",
-    "gulp-twig": "^1.2.0",
-    "gulp-zip": "^4.2.0",
-    "import-modules": "^1.1.0",
-    "webpack": "^4.17.1",
-    "yargs-parser": "^10.1.0"
-  },
-  "devDependencies": {
-    "ava": "^0.25.0",
-    "xo": "^0.22.0"
+    "gulp-svg-sprite": "^1.5.0",
+    "inquirer": "^6.2.1",
+    "make-dir": "^1.3.0",
+    "semver": "^5.6.0",
+    "undertaker-registry": "^1.0.1",
+    "webpack": "^4.26.1",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "yargs-parser": "^11.1.1"
   }
 }

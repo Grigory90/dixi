@@ -2,17 +2,18 @@
     <img width="120" height="120" src="https://cdn.rawgit.com/grig0ry/dixi/75285ac9/media/dixi.svg">
 </h1>
 
+> It is a tool for assembling prototypes and static web pages, based on Gulp and Webpack.
+
+[![npm](https://img.shields.io/npm/v/@dixi/core.svg?style=flat-square)](https://www.npmjs.com/@dixi/core)
 [![Build Status](https://img.shields.io/travis/grig0ry/dixi/master.svg?style=flat-square)](https://travis-ci.org/grig0ry/dixi)
 [![Dependency Status](https://img.shields.io/david/grig0ry/dixi.svg?style=flat-square)](https://david-dm.org/grig0ry/dixi)
-
-> It is a tool for assembling prototypes and simple web pages, based on Gulp and Webpack.
 
 ## Getting Started
 
 ### Installation
 
 ```
-$ npm i -g dixi
+$ npm i @dixi/core -g
 ```
 
 ### Usage
@@ -20,15 +21,21 @@ $ npm i -g dixi
 Run `init` command in the project root directory:
 
 ``` bash
-$ dixi init
+$ di init
 ```
 
-Set the base options in [`dixi.config.js`](https://github.com/grig0ry/dixi/blob/master/data/dixi.config.js) file. (See [options](#options))
+Set the base options in [`dixi.config.js`](https://github.com/grig0ry/dixi/blob/master/lib/dixi.config.js) file. (See [options](#options))
 
 Start server and watchers:
 
 ```
-$ dixi run
+$ di run
+```
+
+Build project:
+
+```
+$ di build
 ```
 
 ## Documentation
@@ -39,9 +46,9 @@ $ dixi run
 .
 ├─ app                   
 │   ├─ src
-│   │   ├─ twig
 │   │   ├─ icons
 │   │   ├─ js
+│   │   ├─ njk
 │   │   ├─ scss
 │   │   ├─ static
 │   │   └─ data.json
@@ -54,72 +61,25 @@ $ dixi run
 ### Commands
 
 ``` bash
-$ dixi # Reference
+Usage: di <command> [options]
 
-$ dixi init  # Initialize project
+Options:
+  -V, --version          output the version number
+  -h, --help             output usage information
 
-$ dixi run  # Start server and watchers
+Commands:
+  init [options]         Copy config file to work directory.
+  run [options]          Run server and watchers.
+  build [options]        Build project.
+  tasks                  Show task list.
+  task [options] <name>  Run specified task.
 
-$ dixi build # Build project
+  Run `di <command> --help` for reference.
 ```
 
 ### Options
+https://github.com/grig0ry/dixi/blob/master/lib/dixi.config.js
 
-#### enableRevision
-
-- value <[boolean]>
-- default `false`
-
-Static asset revisioning by appending content hash to filenames.
-
-#### createArchive
-
-- value <[boolean]>
-- default `false`
-
-Creates zip archive with production files.
-
-#### includeSources
-
-- value <[boolean]>
-- default `false`
-
-Copies the source files to the assembly folder.
-
-#### browsersList
-
-- value <[Array]>
-- default `['defaults']`
-
-Browsers list for [babel-preset-env](https://github.com/babel/babel/tree/master/packages/babel-preset-env) and [autoprefixer](https://github.com/postcss/autoprefixer). See [browserslist](https://github.com/ai/browserslist) for more info.
-
-#### extend(cfg, gulp, Message)
-
-- `cfg` <[Object]> Configuration object.
-- `gulp` <[Function]> Gulp Instance.
-- `Message` <[Class]> Messages [`class`](https://github.com/grig0ry/dixi/blob/master/lib/util.js).
-- return: <[Object]> Return configuration object (required)
-
-This function allows you to change the configuration, create custom tasks, change the task queue, and so on.
-
-``` js
-const baseOptions = {
-
-    extend: (cfg, gulp, Message) =>
-    {
-    	gulp.task('customTask', () =>
-        {
-    		Message.log('Custom task.');
-
-    		return Promise.resolve();
-    	});
-
-    	cfg.builder.tasks.build.push('customTask');
-
-    	return cfg;
-    }
-};
-```
 
 [Class]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class "Class"
 [Function]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function "Function"
