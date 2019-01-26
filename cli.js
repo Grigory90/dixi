@@ -19,7 +19,6 @@ program
 program
     .command('init')
     .description('Copy config file to work directory.')
-    .option('-a, --addon <name>', 'Use addon.')
     .action(initProject);
 
 program
@@ -80,11 +79,6 @@ function invokeGulp(cmd, options = {})
         '--gulpfile', resolve(dir.root, 'index.js')
     ];
 
-    if (options.addon)
-    {
-        args.push('--addon', options.addon);
-    }
-
     if (options.config)
     {
         args.push('--config', resolve(options.config));
@@ -98,30 +92,12 @@ function invokeGulp(cmd, options = {})
     fork(gulpCli, args);
 }
 
-function initProject(cmd)
+function initProject()
 {
     const cfg = {
         root: resolve(dir.root, 'lib/dixi.config.js'),
         work: resolve(dir.work, 'dixi.config.js')
     };
-
-    if (cmd.addon)
-    {
-        const addonPath = resolve(process.cwd(), `node_modules/@dixi/${cmd.addon}`);
-
-        if(existsSync(addonPath))
-        {
-            cfg.root = resolve(addonPath, 'lib/dixi.config.js');
-        }
-        else
-        {
-            console.log();
-            console.log(chalk.redBright(`  Addon \`@dixi/${cmd.addon}\` not found.`));
-            console.log();
-
-            process.exit(1);
-        }
-    }
 
     if (existsSync(cfg.work))
     {
