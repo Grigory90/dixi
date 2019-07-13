@@ -5,64 +5,50 @@
 const { existsSync, copyFileSync } = require('fs');
 const { resolve } = require('path');
 const { fork } = require('child_process');
-const program = require('commander');
 const chalk = require('chalk');
+const program = require('commander');
 
-const dir = { root: __dirname, work: process.cwd() };
-const gulpCli = resolve(dir.root, 'node_modules/gulp/bin/gulp');
+const { version, defaults, log } = require('./lib/builder');
 
 program
     .name('di')
-    .version(require('./package').version)
+    .version(version)
     .usage('<command> [options]');
 
 program
     .command('init')
-    .description('Copy config file to work directory.')
-    .action(initProject);
+    .description('Create configuration file in working directory.')
+    .action(init);
 
 program
     .command('run')
     .description('Run server and watchers.')
-    .option('-c, --config <path>', 'Manually set path of config file.')
-    .action(cmd => invokeGulp('run', cmd));
+    .option('-c, --config <path>', 'Set path of configuration file.')
+    .action((options) => invokeGulp('run', options));
 
 program
     .command('build')
     .description('Build project.')
-    .option('-c, --config <path>', 'Manually set path of config file.')
-    .action(cmd => invokeGulp('build', Object.assign(cmd, { production: true })));
+    .option('-m, --mode <env>', 'Set development or production mode.', 'production')
+    .option('-c, --config <path>', 'Set path of configuration file.')
+    .action((options) => invokeGulp('build', options));
 
 program
-    .command('tasks')
-    .description('Show task list.')
-    .action(() => invokeGulp('--tasks'));
-
-program
-    .command('task <name>')
-    .description('Run specified task.')
-    .option('-p, --production', 'Enable production mode.')
-    .action(invokeGulp);
-
-program
-    .arguments('<command>')
-    .action(cmd =>
+    .on('command:*', (cmd) =>
     {
-        console.log();
-        console.log(chalk`  Unknown command \`{redBright ${cmd}}\`, run \`{cyanBright di --help}\` for reference.`);
-        console.log();
+        log(chalk`Unknown command \`{redBright ${cmd}}\`, run \`{cyanBright di --help}\` for reference.`);
+        process.exit(1);
     });
 
-program.on('--help', () =>
-{
-    console.log();
-    console.log(chalk`  Run \`{cyanBright di <command> --help}\` for reference.`);
-    console.log();
-});
+program
+    .on('--help', () => log(chalk`Run \`{cyanBright di <command> --help}\` for reference.`));
 
-program.commands.forEach(c => c.on('--help', () => console.log()));
+program
+    .commands
+    .forEach((cmd) => cmd.on('--help', () => console.log()));
 
-program.parse(process.argv);
+program
+    .parse(process.argv);
 
 if (process.argv.slice(2).length < 1)
 {
@@ -71,42 +57,34 @@ if (process.argv.slice(2).length < 1)
 
 function invokeGulp(cmd, options = {})
 {
+    const gulp = resolve(__dirname, 'node_modules/gulp/bin/gulp');
     const args = [
         cmd,
         '--color',
-        '--root', dir.root,
-        '--cwd', dir.work,
-        '--gulpfile', resolve(dir.root, 'index.js')
+        '--root', __dirname,
+        '--cwd', process.cwd(),
+        '--gulpfile', resolve(__dirname, 'index.js'),
+        '--mode', (cmd === 'run') ? 'development' : options.mode
     ];
 
     if (options.config)
     {
         args.push('--config', resolve(options.config));
     }
-
-    if (options.production)
-    {
-        args.push('--production');
-    }
-
-    fork(gulpCli, args);
+    
+    fork(gulp, args);
 }
 
-function initProject()
+function init()
 {
-    const cfg = {
-        root: resolve(dir.root, 'lib/dixi.config.js'),
-        work: resolve(dir.work, 'dixi.config.js')
-    };
+    const rootCfg = resolve(__dirname, defaults.cfgFile.root);
+    const workCfg = resolve(process.cwd(), defaults.cfgFile.work);
 
-    if (existsSync(cfg.work))
+    if (existsSync(workCfg))
     {
-        console.log();
-        console.log(chalk.yellowBright('  The configuration file already exists.'));
-        console.log();
-
+        log('Configuration file already exists.', 'yellow');
         process.exit(1);
     }
 
-    copyFileSync(cfg.root, cfg.work);
+    copyFileSync(rootCfg, workCfg);
 }

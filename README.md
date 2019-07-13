@@ -24,8 +24,6 @@ Run `init` command in the project root directory:
 $ di init
 ```
 
-Set the base options in [`dixi.config.js`](https://github.com/grig0ry/dixi/blob/master/lib/dixi.config.js) file. (See [options](#options))
-
 Start server and watchers:
 
 ```
@@ -38,22 +36,21 @@ Build project:
 $ di build
 ```
 
-## Documentation
-
 ### Project structure
 
 ``` bash
 .
 ├─ app                   
+│   ├─ build
+│   ├─ dev
 │   ├─ src
+│   │   ├─ data
 │   │   ├─ icons
 │   │   ├─ js
 │   │   ├─ njk
 │   │   ├─ scss
 │   │   ├─ static
-│   │   └─ data.json
-│   ├─ dev          
-│   └─ build
+│   │   └─ data.json      
 ├─ dixi.config.js
 └─ package.json
 ```
@@ -64,22 +61,24 @@ $ di build
 Usage: di <command> [options]
 
 Options:
-  -V, --version          output the version number
-  -h, --help             output usage information
+  -V, --version    output the version number
+  -h, --help       output usage information
 
 Commands:
-  init [options]         Copy config file to work directory.
-  run [options]          Run server and watchers.
-  build [options]        Build project.
-  tasks                  Show task list.
-  task [options] <name>  Run specified task.
+  init             Create configuration file in working directory.
+  run [options]    Run server and watchers.
+  build [options]  Build project.
 
-  Run `di <command> --help` for reference.
+Run `di <command> --help` for reference.
 ```
 
-### Options
+### Configuration
 https://github.com/grig0ry/dixi/blob/master/lib/dixi.config.js
 
+
+## License
+
+Licensed under the [MIT License](LICENSE.md)
 
 [Class]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class "Class"
 [Function]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function "Function"
