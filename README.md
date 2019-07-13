@@ -5,7 +5,7 @@
 > It is a tool for assembling prototypes and static web pages, based on Gulp and Webpack.
 
 [![npm](https://img.shields.io/npm/v/@dixi/core.svg?style=flat-square)](https://www.npmjs.com/@dixi/core)
-[![Build Status](https://img.shields.io/travis/grig0ry/dixi/master.svg?style=flat-square)](https://travis-ci.org/grig0ry/dixi)
+[![Build Status](https://img.shields.io/travis/grig0ry/dixi/master.svg?style=flat-square)](https://travis-ci.com/grig0ry/dixi)
 [![Dependency Status](https://img.shields.io/david/grig0ry/dixi.svg?style=flat-square)](https://david-dm.org/grig0ry/dixi)
 
 ## Getting Started
