@@ -44,7 +44,7 @@ Build project:
 $ di build
 ```
 
-`If the installation was local, then use [npx](https://github.com/npm/npx)`
+If the installation was local, then use [npx](https://github.com/npm/npx).
 
 ### Project structure
 
