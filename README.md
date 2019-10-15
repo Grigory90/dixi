@@ -12,8 +12,16 @@
 
 ### Installation
 
-```
+Global:
+
+``` bash
 $ npm i @dixi/core -g
+```
+
+or local:
+
+``` bash
+$ npm i @dixi/core
 ```
 
 ### Usage
@@ -26,15 +34,17 @@ $ di init
 
 Start server and watchers:
 
-```
+``` bash
 $ di run
 ```
 
 Build project:
 
-```
+``` bash
 $ di build
 ```
+
+`If the installation was local, then use [npx](https://github.com/npm/npx)`
 
 ### Project structure
 
@@ -73,15 +83,10 @@ Run `di <command> --help` for reference.
 ```
 
 ### Configuration
+
 https://github.com/grig0ry/dixi/blob/master/lib/dixi.config.js
 
 
 ## License
 
 Licensed under the [MIT License](LICENSE.md)
-
-[Class]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/class "Class"
-[Function]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function "Function"
-[Object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object  "Object"
-[Array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array  "Array"
-[boolean]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type  "Boolean"

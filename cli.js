@@ -29,7 +29,6 @@ program
 program
     .command('build')
     .description('Build project.')
-    .option('-m, --mode <env>', 'Set development or production mode.', 'production')
     .option('-c, --config <path>', 'Set path of configuration file.')
     .action((options) => invokeGulp('build', options));
 
@@ -64,7 +63,7 @@ function invokeGulp(cmd, options = {})
         '--root', __dirname,
         '--cwd', process.cwd(),
         '--gulpfile', resolve(__dirname, 'index.js'),
-        '--mode', (cmd === 'run') ? 'development' : options.mode
+        '--mode', (cmd === 'run') ? 'development' : 'production'
     ];
 
     if (options.config)
