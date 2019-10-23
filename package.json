@@ -27,7 +27,7 @@
   "dependencies": {
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
-    "autoprefixer": "^9.6.4",
+    "autoprefixer": "^9.6.5",
     "babel-loader": "^8.0.6",
     "browser-sync": "^2.26.7",
     "chalk": "^2.4.2",
@@ -45,9 +45,9 @@
     "gulp-rev-delete-original": "^0.2.3",
     "gulp-sass": "^4.0.2",
     "gulp-svg-sprite": "^1.5.0",
-    "sass": "^1.23.0",
-    "webpack": "^4.41.1",
-    "webpack-bundle-analyzer": "^3.5.2",
+    "sass": "^1.23.1",
+    "webpack": "^4.41.2",
+    "webpack-bundle-analyzer": "^3.6.0",
     "yargs-parser": "^15.0.0"
   }
 }
