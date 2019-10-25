@@ -56,7 +56,10 @@ if (process.argv.slice(2).length < 1)
 
 function invokeGulp(cmd, options = {})
 {
-    const gulp = resolve(__dirname, 'node_modules/gulp/bin/gulp');
+    let gulp = resolve(__dirname, 'node_modules/gulp/bin/gulp.js');
+    
+    gulp = existsSync(gulp) ? gulp : resolve(__dirname, '../../gulp/bin/gulp.js');
+
     const args = [
         cmd,
         '--color',

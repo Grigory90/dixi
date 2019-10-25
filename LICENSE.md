@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) Grigory Kozulya <hello@grigory.one> (https://grigory.one)
+Copyright (c) Grigory Kozulya <hello@grigory.dev> (https://grigory.dev)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
