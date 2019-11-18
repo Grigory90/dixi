@@ -22,16 +22,16 @@
     "test": "eslint \"**/*.js\""
   },
   "devDependencies": {
-    "eslint": "^6.5.1"
+    "eslint": "^6.6.0"
   },
   "dependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/preset-env": "^7.6.3",
-    "autoprefixer": "^9.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "autoprefixer": "^9.7.1",
     "babel-loader": "^8.0.6",
     "browser-sync": "^2.26.7",
-    "chalk": "^2.4.2",
-    "commander": "^3.0.2",
+    "chalk": "^3.0.0",
+    "commander": "^4.0.1",
     "cssnano": "^4.1.10",
     "del": "^5.1.0",
     "fast-glob": "^3.1.0",
@@ -45,9 +45,9 @@
     "gulp-rev-delete-original": "^0.2.3",
     "gulp-sass": "^4.0.2",
     "gulp-svg-sprite": "^1.5.0",
-    "sass": "^1.23.1",
+    "sass": "^1.23.6",
     "webpack": "^4.41.2",
     "webpack-bundle-analyzer": "^3.6.0",
-    "yargs-parser": "^15.0.0"
+    "yargs-parser": "^16.1.0"
   }
 }
