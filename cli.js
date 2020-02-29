@@ -1,14 +1,13 @@
 #!/usr/bin/env node
 
-'use strict';
-
 const { existsSync, copyFileSync } = require('fs');
 const { resolve } = require('path');
 const { fork } = require('child_process');
 const chalk = require('chalk');
 const program = require('commander');
 
-const { version, defaults, log } = require('./lib/builder');
+const defaults = require('./lib/defaults');
+const { log, version } = require('./lib/utils');
 
 program
     .name('di')
@@ -54,6 +53,20 @@ if (process.argv.slice(2).length < 1)
     program.outputHelp();
 }
 
+function init()
+{
+    const rootCfg = resolve(__dirname, defaults.cfgFile.root);
+    const workCfg = resolve(process.cwd(), defaults.cfgFile.work);
+
+    if (existsSync(workCfg))
+    {
+        log('Configuration file already exists.', 'yellow');
+        process.exit(1);
+    }
+
+    copyFileSync(rootCfg, workCfg);
+}
+
 function invokeGulp(cmd, options = {})
 {
     let gulp = resolve(__dirname, 'node_modules/gulp/bin/gulp.js');
@@ -75,18 +88,4 @@ function invokeGulp(cmd, options = {})
     }
     
     fork(gulp, args);
-}
-
-function init()
-{
-    const rootCfg = resolve(__dirname, defaults.cfgFile.root);
-    const workCfg = resolve(process.cwd(), defaults.cfgFile.work);
-
-    if (existsSync(workCfg))
-    {
-        log('Configuration file already exists.', 'yellow');
-        process.exit(1);
-    }
-
-    copyFileSync(rootCfg, workCfg);
 }

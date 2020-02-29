@@ -1,6 +1,4 @@
-'use strict';
-
-const builder = require('./lib/builder')();
+const builder = require('./lib')();
 const { series, parallel } = require('gulp');
 
 builder.series = series;
