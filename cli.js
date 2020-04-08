@@ -32,13 +32,6 @@ program
     .action((options) => invokeGulp('build', options));
 
 program
-    .on('command:*', (cmd) =>
-    {
-        log(chalk`Unknown command \`{redBright ${cmd}}\`, run \`{cyanBright di --help}\` for reference.`);
-        process.exit(1);
-    });
-
-program
     .on('--help', () => log(chalk`Run \`{cyanBright di <command> --help}\` for reference.`));
 
 program
